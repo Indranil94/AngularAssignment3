@@ -11,19 +11,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   display:boolean;
-  logs:Array<number>;
-  data:number;
+  logs:Array<Date>;
   constructor(){
     this.display=false;
     this.logs=[];
-    this.data=1;
   }
 
   onDisplay(){
     this.display = !this.display;
     // this.time= (new Date()).toString()
-    this.logs.push(this.data);
-    this.data++;
+    this.logs.push(new Date());
+    // this.data++;
     //console.log(this.logs)
   }
 }
